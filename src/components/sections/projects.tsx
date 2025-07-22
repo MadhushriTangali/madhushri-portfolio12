@@ -46,7 +46,7 @@ export function ProjectsSection() {
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Featured <span className="text-gradient-primary">Projects</span>
+              Featured <span className="text-gradient-primary">Projects</span> & Full Stack Projects
             </h2>
             <div className="w-20 h-1 gradient-primary mx-auto rounded-full mb-4"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
