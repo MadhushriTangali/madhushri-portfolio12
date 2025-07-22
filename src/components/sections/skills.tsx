@@ -105,8 +105,8 @@ export function SkillsSection() {
                     <div className="text-sm text-muted-foreground">Bootcamps Completed</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-accent mb-1">2+</div>
-                    <div className="text-sm text-muted-foreground">Years Experience</div>
+                    <div className="text-2xl font-bold text-accent mb-1">Advanced</div>
+                    <div className="text-sm text-muted-foreground">Skill Level</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-success mb-1">50+</div>
