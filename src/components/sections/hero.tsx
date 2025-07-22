@@ -14,12 +14,7 @@ export function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Profile Image */}
-          <div className="mb-8 animate-fade-in">
-            <div className="relative w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-6">
-              <img src={profileImage} alt="Madhushri Tangali" className="w-full h-full object-cover rounded-full shadow-large border-4 border-primary/20 animate-float" />
-              <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20 animate-pulse-glow"></div>
-            </div>
-          </div>
+          
 
           {/* Main Heading */}
           <div className="animate-fade-in-up">
