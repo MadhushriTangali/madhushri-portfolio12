@@ -1,13 +1,40 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from 'react'
+import { ThemeProvider } from '@/components/theme-provider'
+import { Navigation } from '@/components/navigation'
+import { HeroSection } from '@/components/sections/hero'
+import { AboutSection } from '@/components/sections/about'
+import { ExperienceSection } from '@/components/sections/experience'
+import { SkillsSection } from '@/components/sections/skills'
+import { ProjectsSection } from '@/components/sections/projects'
+import { ContactSection } from '@/components/sections/contact'
+import { Footer } from '@/components/footer'
 
 const Index = () => {
+  useEffect(() => {
+    // Initialize smooth scrolling behavior
+    document.documentElement.style.scrollBehavior = 'smooth'
+    
+    // Cleanup on unmount
+    return () => {
+      document.documentElement.style.scrollBehavior = 'auto'
+    }
+  }, [])
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <ThemeProvider defaultTheme="light" storageKey="madhushri-portfolio-theme">
+      <div className="min-h-screen">
+        <Navigation />
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <ExperienceSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <ContactSection />
+        </main>
+        <Footer />
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 
