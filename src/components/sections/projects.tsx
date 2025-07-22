@@ -23,7 +23,7 @@ const fullStackProjects = [
     description: 'Smart day planning application with task management and scheduling features.',
     technologies: ['React.js', 'Node.js', 'Authentication', 'Task Management'],
     githubUrl: 'https://github.com/MadhushriTangali/learn-script-scribe',
-    liveUrl: 'https://officedayplanner.netlify.app/auth',
+    liveUrl: 'https://learn-script-scribe.vercel.app/auth',
   },
   {
     title: 'Interview Insights Flow – Unstoppable',

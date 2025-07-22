@@ -47,7 +47,7 @@ export function Navigation() {
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection('#home')}
-              className="text-xl font-bold text-gradient-primary hover:scale-105 transition-smooth"
+              className="text-xl font-bold text-gradient-primary hover:scale-110 transition-smooth animate-pulse-subtle"
             >
               MT
             </button>
@@ -60,9 +60,10 @@ export function Navigation() {
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-muted-foreground hover:text-foreground px-3 py-2 rounded-md text-sm font-medium transition-smooth hover:bg-accent/10"
+                  className="text-muted-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-smooth hover:bg-primary/10 hover:scale-105 relative group"
                 >
                   {item.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </button>
               ))}
             </div>
