@@ -8,8 +8,8 @@ const projects = [
     title: 'Talent Spark – Resume Builder',
     description: 'Real-time resume builder using React with preview and form validation features.',
     technologies: ['React.js', 'JavaScript', 'CSS', 'Form Validation'],
-    githubUrl: 'https://github.com/MadhushriTangali',
-    liveUrl: 'https://madhushritangali.github.io',
+    githubUrl: 'https://github.com/MadhushriTangali/talent-spark-resume-builder',
+    liveUrl: 'https://futurebuilder12.netlify.app/',
     featured: true,
   },
   {
