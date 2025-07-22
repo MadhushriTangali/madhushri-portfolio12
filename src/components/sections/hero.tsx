@@ -14,7 +14,16 @@ export function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Profile Image */}
-          
+          <div className="mb-8 animate-fade-in-up">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-6 relative">
+              <img 
+                src="/lovable-uploads/de4f9fe3-a11e-4f87-8bfd-bdf7bb6f69b4.png" 
+                alt="Madhushri Tangali" 
+                className="w-full h-full rounded-full object-cover shadow-elegant border-4 border-primary/20 hover:border-primary/40 transition-smooth hover:scale-105"
+              />
+              <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-0 hover:opacity-10 transition-smooth"></div>
+            </div>
+          </div>
 
           {/* Main Heading */}
           <div className="animate-fade-in-up">
@@ -42,9 +51,6 @@ export function HeroSection() {
 
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-12 animate-fade-in">
-            <a href="mailto:madhushri.kle@gmail.com" className="text-muted-foreground hover:text-primary transition-smooth hover:scale-110" aria-label="Email">
-              <Mail className="h-6 w-6" />
-            </a>
             <a href="https://github.com/MadhushriTangali" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-smooth hover:scale-110" aria-label="GitHub">
               <Github className="h-6 w-6" />
             </a>
