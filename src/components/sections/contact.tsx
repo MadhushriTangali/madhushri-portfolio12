@@ -25,7 +25,7 @@ const contactInfo = [
     icon: Linkedin,
     label: 'LinkedIn',
     value: 'madhushri-tangali',
-    href: 'https://linkedin.com/in/madhushri-tangali',
+    href: 'https://www.linkedin.com/in/madhushri-tangali/',
     color: 'text-blue-500',
   },
   {
@@ -88,7 +88,7 @@ export function ContactSection() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="max-w-2xl mx-auto">
             {/* Contact Information */}
             <div className="space-y-8 animate-fade-in-up">
               <div>
@@ -148,83 +148,6 @@ export function ContactSection() {
               </Card>
             </div>
 
-            {/* Contact Form */}
-            <div className="animate-slide-in-right">
-              <Card className="shadow-large">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold mb-6">Send a Message</h3>
-                  
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <Input
-                          placeholder="Your Name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleInputChange}
-                          required
-                          className="transition-smooth focus:ring-2 focus:ring-primary/20"
-                        />
-                      </div>
-                      <div>
-                        <Input
-                          type="email"
-                          placeholder="Your Email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          required
-                          className="transition-smooth focus:ring-2 focus:ring-primary/20"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <Input
-                        placeholder="Subject"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleInputChange}
-                        required
-                        className="transition-smooth focus:ring-2 focus:ring-primary/20"
-                      />
-                    </div>
-                    
-                    <div>
-                      <Textarea
-                        placeholder="Your Message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        required
-                        rows={5}
-                        className="transition-smooth focus:ring-2 focus:ring-primary/20 resize-none"
-                      />
-                    </div>
-                    
-                    <Button
-                      type="submit"
-                      variant="hero"
-                      size="lg"
-                      disabled={isSubmitting}
-                      className="w-full"
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          <Send className="h-4 w-4 mr-2" />
-                          Send Message
-                        </>
-                      )}
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </div>
       </div>

@@ -4,17 +4,12 @@ import { Building2, Calendar, Users, Code } from 'lucide-react'
 
 const experiences = [
   {
-    title: 'Software Development Faculty Trainee',
+    title: 'Software Development Instructor',
     company: 'NxtWave',
     period: 'May 2025 – Present',
     type: 'Current Role',
     description: 'Currently mentoring students in Python, SQLite, and full-stack fundamentals.',
-    highlights: [
-      'Mentoring 50+ students in Python programming',
-      'Developing curriculum for SQLite and database concepts',
-      'Conducting code reviews and technical interviews',
-      'Creating hands-on projects for real-world learning'
-    ],
+    highlights: [],
     icon: Users,
     current: true,
   },
@@ -24,12 +19,7 @@ const experiences = [
     period: 'May 2022 – Aug 2024',
     type: 'Full-time',
     description: 'Worked on enterprise software projects in full-stack environments.',
-    highlights: [
-      'Developed scalable web applications using modern frameworks',
-      'Collaborated with cross-functional teams on enterprise solutions',
-      'Implemented best practices for code quality and performance',
-      'Participated in agile development methodologies'
-    ],
+    highlights: [],
     icon: Building2,
     current: false,
   },
@@ -53,8 +43,8 @@ export function ExperienceSection() {
             {experiences.map((exp, index) => (
               <Card
                 key={index}
-                className={`transition-smooth hover:shadow-large group animate-fade-in-up ${
-                  exp.current ? 'border-primary/30 shadow-medium' : ''
+                className={`transition-smooth hover:shadow-large hover:scale-[1.02] group animate-fade-in-up ${
+                  exp.current ? 'border-primary/30 shadow-medium animate-pulse-subtle' : ''
                 }`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
@@ -99,20 +89,22 @@ export function ExperienceSection() {
                       </p>
 
                       {/* Highlights */}
-                      <div className="space-y-3">
-                        <h4 className="font-semibold flex items-center">
-                          <Code className="h-4 w-4 mr-2 text-accent" />
-                          Key Achievements
-                        </h4>
-                        <ul className="space-y-2">
-                          {exp.highlights.map((highlight, i) => (
-                            <li key={i} className="flex items-start">
-                              <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                              <span className="text-muted-foreground">{highlight}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                      {exp.highlights.length > 0 && (
+                        <div className="space-y-3">
+                          <h4 className="font-semibold flex items-center">
+                            <Code className="h-4 w-4 mr-2 text-accent" />
+                            Key Achievements
+                          </h4>
+                          <ul className="space-y-2">
+                            {exp.highlights.map((highlight, i) => (
+                              <li key={i} className="flex items-start">
+                                <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                <span className="text-muted-foreground">{highlight}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </CardContent>

@@ -215,6 +215,17 @@
     }
   }
 
+  @keyframes pulse-subtle {
+    0%, 100% { 
+      transform: scale(1);
+      box-shadow: 0 8px 24px -4px hsl(var(--primary) / 0.12);
+    }
+    50% { 
+      transform: scale(1.005);
+      box-shadow: 0 12px 32px -4px hsl(var(--primary) / 0.16);
+    }
+  }
+
   /* Utility classes */
   .animate-fade-in-up {
     animation: fade-in-up 0.6s ease-out;
@@ -234,6 +245,10 @@
 
   .animate-pulse-glow {
     animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-pulse-subtle {
+    animation: pulse-subtle 3s ease-in-out infinite;
   }
 
   /* Design system components */

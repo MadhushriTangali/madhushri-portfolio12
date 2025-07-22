@@ -79,7 +79,7 @@ export function HeroSection() {
               <Github className="h-6 w-6" />
             </a>
             <a
-              href="https://linkedin.com/in/madhushri-tangali"
+              href="https://www.linkedin.com/in/madhushri-tangali/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-smooth hover:scale-110"
