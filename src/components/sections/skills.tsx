@@ -26,25 +26,7 @@ const skillCategories = [
   },
 ]
 
-const bootcamps = [
-  'IoT Fundamentals',
-  'Generative AI Essentials',
-  'Advanced Python',
-  'React Mastery',
-  'Node.js Deep Dive',
-  'Database Design',
-  'API Development',
-  'Cloud Computing',
-  'DevOps Basics',
-  'Machine Learning',
-  'Data Structures',
-  'Algorithm Design',
-  'System Design',
-  'Microservices',
-  'GraphQL',
-  'TypeScript',
-  'Testing Strategies'
-]
+const bootcamps: string[] = []
 
 export function SkillsSection() {
   return (
@@ -100,7 +82,7 @@ export function SkillsSection() {
                     <Award className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold mb-2">
-                    Bootcamps & <span className="text-gradient-accent">Certifications</span>
+                    <span className="text-gradient-accent">Bootcamps</span>
                   </h3>
                   <p className="text-muted-foreground">
                     Participated in <span className="font-semibold text-accent">17 NxtWave bootcamps</span> covering 
@@ -108,17 +90,12 @@ export function SkillsSection() {
                   </p>
                 </div>
 
-                {/* Bootcamp Tags */}
-                <div className="flex flex-wrap gap-3 justify-center">
-                  {bootcamps.map((bootcamp, index) => (
-                    <Badge
-                      key={index}
-                      variant="outline"
-                      className="hover:bg-accent hover:text-accent-foreground hover:border-accent transition-smooth cursor-default text-sm py-1 px-3"
-                    >
-                      {bootcamp}
-                    </Badge>
-                  ))}
+                {/* Bootcamp Description */}
+                <div className="text-center">
+                  <p className="text-muted-foreground max-w-2xl mx-auto">
+                    Completed comprehensive training programs covering advanced web development, 
+                    full-stack technologies, and modern development practices.
+                  </p>
                 </div>
 
                 {/* Achievement Stats */}
