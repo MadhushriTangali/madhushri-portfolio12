@@ -16,8 +16,8 @@ const projects = [
     title: 'Block Build – Portfolio Builder',
     description: 'Drag-and-drop portfolio creator with AI content assist.',
     technologies: ['React.js', 'Node.js', 'AI Integration', 'Drag & Drop'],
-    githubUrl: 'https://github.com/MadhushriTangali',
-    liveUrl: 'https://madhushritangali.github.io',
+    githubUrl: 'https://github.com/MadhushriTangali/block-build-folio-fun',
+    liveUrl: 'https://portfoliobuilder123.netlify.app/',
     featured: true,
   },
   {
