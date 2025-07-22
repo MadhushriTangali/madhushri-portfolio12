@@ -37,41 +37,53 @@ export function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
         isScrolled
-          ? 'glass shadow-elegant backdrop-blur-md border-b border-primary/20'
-          : 'bg-gradient-subtle backdrop-blur-sm'
+          ? 'glass shadow-large backdrop-blur-xl border-b border-primary/30 bg-background/95'
+          : 'gradient-primary backdrop-blur-lg shadow-glow'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection('#home')}
-              className="text-xl font-bold text-gradient-primary hover:scale-110 transition-smooth animate-pulse-glow shadow-glow hover:shadow-elegant"
+              className={`text-2xl font-bold transition-smooth hover:scale-110 relative group ${
+                isScrolled 
+                  ? 'text-gradient-primary' 
+                  : 'text-white drop-shadow-lg'
+              }`}
             >
-              MT
+              <span className="relative z-10">MT</span>
+              <div className="absolute inset-0 bg-gradient-accent rounded-lg opacity-0 group-hover:opacity-20 transition-smooth blur-sm scale-150"></div>
             </button>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-center space-x-1">
               {navItems.map((item) => (
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-muted-foreground hover:text-foreground px-3 py-2 rounded-md text-sm font-medium transition-smooth hover:bg-gradient-primary hover:text-white hover:scale-105 hover:shadow-glow relative group"
+                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-smooth relative group overflow-hidden ${
+                    isScrolled
+                      ? 'text-muted-foreground hover:text-primary hover:bg-primary/10'
+                      : 'text-white/90 hover:text-white hover:bg-white/10'
+                  }`}
                 >
-                  {item.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full shadow-glow"></span>
+                  <span className="relative z-10">{item.label}</span>
+                  <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-100 transition-smooth transform scale-x-0 group-hover:scale-x-100 origin-left"></div>
+                  <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-smooth transform scale-x-0 group-hover:scale-x-100 origin-left delay-75"></div>
                 </button>
               ))}
             </div>
           </div>
 
           {/* Theme Toggle & Mobile Menu Button */}
-          <div className="flex items-center space-x-2">
-            <ThemeToggle />
+          <div className="flex items-center space-x-3">
+            <div className="hidden sm:block">
+              <ThemeToggle />
+            </div>
             
             {/* Mobile menu button */}
             <div className="md:hidden">
@@ -79,29 +91,40 @@ export function Navigation() {
                 variant="ghost"
                 size="icon"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="h-9 w-9"
+                className={`h-10 w-10 transition-smooth hover:scale-110 ${
+                  isScrolled 
+                    ? 'hover:bg-primary/10' 
+                    : 'hover:bg-white/10 text-white'
+                }`}
               >
                 {isMobileMenuOpen ? (
-                  <X className="h-4 w-4" />
+                  <X className="h-5 w-5" />
                 ) : (
-                  <Menu className="h-4 w-4" />
+                  <Menu className="h-5 w-5" />
                 )}
               </Button>
+            </div>
+            
+            {/* Mobile theme toggle */}
+            <div className="sm:hidden">
+              <ThemeToggle />
             </div>
           </div>
         </div>
 
         {/* Mobile Navigation Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden glass animate-fade-in">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="md:hidden glass animate-fade-in border-t border-primary/20 backdrop-blur-xl">
+            <div className="px-4 pt-4 pb-6 space-y-2">
               {navItems.map((item) => (
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-muted-foreground hover:text-foreground block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-smooth hover:bg-accent/10"
+                  className="text-muted-foreground hover:text-primary block px-4 py-3 rounded-lg text-base font-semibold w-full text-left transition-smooth hover:bg-gradient-primary hover:text-white hover:shadow-medium group"
                 >
-                  {item.label}
+                  <span className="group-hover:translate-x-2 transition-smooth inline-block">
+                    {item.label}
+                  </span>
                 </button>
               ))}
             </div>
