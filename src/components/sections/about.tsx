@@ -47,7 +47,7 @@ export function AboutSection() {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Software Development Instructor at <span className="text-primary font-semibold">NxtWave</span> and 
                 a certified <span className="text-accent font-semibold">MERN Stack Developer</span>. I specialize 
-                in building dynamic, full-stack web applications using MongoDB, Express.js, React, and Node.js.
+                in building dynamic, full-stack web applications using Express.js, React, and Node.js.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 I transitioned into mentoring after completing the MERN Full Stack program at NxtWave. 
