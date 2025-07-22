@@ -37,8 +37,8 @@ export function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
         isScrolled
-          ? 'glass shadow-soft backdrop-blur-md'
-          : 'bg-transparent'
+          ? 'glass shadow-elegant backdrop-blur-md border-b border-primary/20'
+          : 'bg-gradient-subtle backdrop-blur-sm'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,7 +47,7 @@ export function Navigation() {
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection('#home')}
-              className="text-xl font-bold text-gradient-primary hover:scale-110 transition-smooth animate-pulse-subtle"
+              className="text-xl font-bold text-gradient-primary hover:scale-110 transition-smooth animate-pulse-glow shadow-glow hover:shadow-elegant"
             >
               MT
             </button>
@@ -60,10 +60,10 @@ export function Navigation() {
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-muted-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-smooth hover:bg-primary/10 hover:scale-105 relative group"
+                  className="text-muted-foreground hover:text-foreground px-3 py-2 rounded-md text-sm font-medium transition-smooth hover:bg-gradient-primary hover:text-white hover:scale-105 hover:shadow-glow relative group"
                 >
                   {item.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full shadow-glow"></span>
                 </button>
               ))}
             </div>

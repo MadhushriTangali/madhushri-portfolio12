@@ -8,13 +8,6 @@ import { useToast } from '@/hooks/use-toast'
 
 const contactInfo = [
   {
-    icon: Mail,
-    label: 'Email',
-    value: 'madhushri.kle@gmail.com',
-    href: 'mailto:madhushri.kle@gmail.com',
-    color: 'text-red-500',
-  },
-  {
     icon: Phone,
     label: 'Phone',
     value: '+91 9606757654',
